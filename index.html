@@ -6652,36 +6652,171 @@ Robotic Manipulation</span></h1>
                             <div class="bg-gray-100 border-r border-gray-200" style="width: 15%; flex-shrink: 0;">
                                 <div class="p-1">
                                     <div class="space-y-1" id="sceneList">
+                                        <!-- Direct scenes -->
                                         <button class="vuer-scene-btn w-full text-center p-1 rounded-md bg-white text-gray-700 hover:bg-gray-50 border border-gray-300 transition-all duration-200"
-                                                data-scene="manipulation"
-                                                data-url="https://staging.vuer.ai/?scene=manipulation_demo">
-                                            <div class="font-medium text-xs">Manipulation</div>
-                                        </button>
-                                        <button class="vuer-scene-btn w-full text-center p-1 rounded-md bg-white text-gray-700 hover:bg-gray-50 border border-gray-300 transition-all duration-200"
-                                                data-scene="dexterous"
-                                                data-url="https://staging.vuer.ai/?scene=dexterous_demo">
-                                            <div class="font-medium text-xs">Dexterous</div>
-                                        </button>
-                                        <button class="vuer-scene-btn w-full text-center p-1 rounded-md bg-white text-gray-700 hover:bg-gray-50 border border-gray-300 transition-all duration-200"
-                                                data-scene="bimanual"
-                                                data-url="https://staging.vuer.ai/?scene=bimanual_demo">
-                                            <div class="font-medium text-xs">Bimanual</div>
-                                        </button>
-                                        <button class="vuer-scene-btn w-full text-center p-1 rounded-md bg-white text-gray-700 hover:bg-gray-50 border border-gray-300 transition-all duration-200"
-                                                data-scene="soft-body"
-                                                data-url="https://staging.vuer.ai/?scene=soft_body_demo">
-                                            <div class="font-medium text-xs">Soft Body</div>
-                                        </button>
-                                        <button class="vuer-scene-btn w-full text-center p-1 rounded-md bg-white text-gray-700 hover:bg-gray-50 border border-gray-300 transition-all duration-200"
-                                                data-scene="particles"
-                                                data-url="https://staging.vuer.ai/?scene=particle_demo">
-                                            <div class="font-medium text-xs">Particles</div>
-                                        </button>
-                                        <button class="vuer-scene-btn w-full text-center p-1 rounded-md bg-red-600 text-white hover:bg-red-700 border border-red-600 transition-all duration-200"
-                                                data-scene="adhesion"
-                                                data-url="https://staging.vuer.ai/?scene=adhesion_demo">
+                                                data-scene="adhesion">
                                             <div class="font-medium text-xs">Adhesion</div>
                                         </button>
+                                        <button class="vuer-scene-btn w-full text-center p-1 rounded-md bg-white text-gray-700 hover:bg-gray-50 border border-gray-300 transition-all duration-200"
+                                                data-scene="balloons">
+                                            <div class="font-medium text-xs">Balloons</div>
+                                        </button>
+                                        <button class="vuer-scene-btn w-full text-center p-1 rounded-md bg-white text-gray-700 hover:bg-gray-50 border border-gray-300 transition-all duration-200"
+                                                data-scene="belt">
+                                            <div class="font-medium text-xs">Belt</div>
+                                        </button>
+                                        <button class="vuer-scene-btn w-full text-center p-1 rounded-md bg-white text-gray-700 hover:bg-gray-50 border border-gray-300 transition-all duration-200"
+                                                data-scene="bunny">
+                                            <div class="font-medium text-xs">Bunny</div>
+                                        </button>
+                                        <button class="vuer-scene-btn w-full text-center p-1 rounded-md bg-white text-gray-700 hover:bg-gray-50 border border-gray-300 transition-all duration-200"
+                                                data-scene="cable">
+                                            <div class="font-medium text-xs">Cable</div>
+                                        </button>
+                                        <button class="vuer-scene-btn w-full text-center p-1 rounded-md bg-white text-gray-700 hover:bg-gray-50 border border-gray-300 transition-all duration-200"
+                                                data-scene="cards">
+                                            <div class="font-medium text-xs">Cards</div>
+                                        </button>
+                                        <button class="vuer-scene-btn w-full text-center p-1 rounded-md bg-white text-gray-700 hover:bg-gray-50 border border-gray-300 transition-all duration-200"
+                                                data-scene="coil">
+                                            <div class="font-medium text-xs">Coil</div>
+                                        </button>
+                                        <button class="vuer-scene-btn w-full text-center p-1 rounded-md bg-white text-gray-700 hover:bg-gray-50 border border-gray-300 transition-all duration-200"
+                                                data-scene="humanoids">
+                                            <div class="font-medium text-xs">Humanoids</div>
+                                        </button>
+                                        <button class="vuer-scene-btn w-full text-center p-1 rounded-md bg-white text-gray-700 hover:bg-gray-50 border border-gray-300 transition-all duration-200"
+                                                data-scene="mannequin">
+                                            <div class="font-medium text-xs">Mannequin</div>
+                                        </button>
+                                        <button class="vuer-scene-btn w-full text-center p-1 rounded-md bg-white text-gray-700 hover:bg-gray-50 border border-gray-300 transition-all duration-200"
+                                                data-scene="slider_crank">
+                                            <div class="font-medium text-xs">Slider Crank</div>
+                                        </button>
+                                        <button class="vuer-scene-btn w-full text-center p-1 rounded-md bg-white text-gray-700 hover:bg-gray-50 border border-gray-300 transition-all duration-200"
+                                                data-scene="tendon_arm">
+                                            <div class="font-medium text-xs">Tendon Arm</div>
+                                        </button>
+                                        <button class="vuer-scene-btn w-full text-center p-1 rounded-md bg-white text-gray-700 hover:bg-gray-50 border border-gray-300 transition-all duration-200"
+                                                data-scene="trampoline">
+                                            <div class="font-medium text-xs">Trampoline</div>
+                                        </button>
+
+                                        <!-- Flex category dropdown -->
+                                        <div class="dropdown-container">
+                                            <button class="dropdown-btn w-full text-center p-1 rounded-md bg-blue-100 text-gray-700 hover:bg-blue-200 border border-blue-300 transition-all duration-200" onclick="toggleDropdown('flex')">
+                                                <div class="font-medium text-xs flex items-center justify-between px-1">
+                                                    <span>Flex Scenes</span>
+                                                    <span class="dropdown-arrow" id="flex-arrow">▼</span>
+                                                </div>
+                                            </button>
+                                            <div class="dropdown-content" id="flex-content" style="display: none; margin-top: 2px;">
+                                                <button class="vuer-scene-btn w-full text-center p-1 rounded-md bg-white text-gray-700 hover:bg-gray-50 border border-gray-300 transition-all duration-200 ml-2" style="width: calc(100% - 8px);"
+                                                        data-scene="flex-flag">
+                                                    <div class="font-medium text-xs">Flag</div>
+                                                </button>
+                                                <button class="vuer-scene-btn w-full text-center p-1 rounded-md bg-white text-gray-700 hover:bg-gray-50 border border-gray-300 transition-all duration-200 ml-2" style="width: calc(100% - 8px);"
+                                                        data-scene="flex-floppy">
+                                                    <div class="font-medium text-xs">Floppy</div>
+                                                </button>
+                                                <button class="vuer-scene-btn w-full text-center p-1 rounded-md bg-white text-gray-700 hover:bg-gray-50 border border-gray-300 transition-all duration-200 ml-2" style="width: calc(100% - 8px);"
+                                                        data-scene="flex-hammock">
+                                                    <div class="font-medium text-xs">Hammock</div>
+                                                </button>
+                                                <button class="vuer-scene-btn w-full text-center p-1 rounded-md bg-white text-gray-700 hover:bg-gray-50 border border-gray-300 transition-all duration-200 ml-2" style="width: calc(100% - 8px);"
+                                                        data-scene="flex-jelly">
+                                                    <div class="font-medium text-xs">Jelly</div>
+                                                </button>
+                                                <button class="vuer-scene-btn w-full text-center p-1 rounded-md bg-white text-gray-700 hover:bg-gray-50 border border-gray-300 transition-all duration-200 ml-2" style="width: calc(100% - 8px);"
+                                                        data-scene="flex-poncho">
+                                                    <div class="font-medium text-xs">Poncho</div>
+                                                </button>
+                                                <button class="vuer-scene-btn w-full text-center p-1 rounded-md bg-white text-gray-700 hover:bg-gray-50 border border-gray-300 transition-all duration-200 ml-2" style="width: calc(100% - 8px);"
+                                                        data-scene="flex-pulley">
+                                                    <div class="font-medium text-xs">Pulley</div>
+                                                </button>
+                                            </div>
+                                        </div>
+
+                                        <!-- Replicate category dropdown -->
+                                        <div class="dropdown-container">
+                                            <button class="dropdown-btn w-full text-center p-1 rounded-md bg-green-100 text-gray-700 hover:bg-green-200 border border-green-300 transition-all duration-200" onclick="toggleDropdown('replicate')">
+                                                <div class="font-medium text-xs flex items-center justify-between px-1">
+                                                    <span>Replicate Scenes</span>
+                                                    <span class="dropdown-arrow" id="replicate-arrow">▼</span>
+                                                </div>
+                                            </button>
+                                            <div class="dropdown-content" id="replicate-content" style="display: none; margin-top: 2px;">
+                                                <button class="vuer-scene-btn w-full text-center p-1 rounded-md bg-white text-gray-700 hover:bg-gray-50 border border-gray-300 transition-all duration-200 ml-2" style="width: calc(100% - 8px);"
+                                                        data-scene="replicate-bowl">
+                                                    <div class="font-medium text-xs">Bowl</div>
+                                                </button>
+                                                <button class="vuer-scene-btn w-full text-center p-1 rounded-md bg-white text-gray-700 hover:bg-gray-50 border border-gray-300 transition-all duration-200 ml-2" style="width: calc(100% - 8px);"
+                                                        data-scene="replicate-bunnies">
+                                                    <div class="font-medium text-xs">Bunnies</div>
+                                                </button>
+                                                <button class="vuer-scene-btn w-full text-center p-1 rounded-md bg-white text-gray-700 hover:bg-gray-50 border border-gray-300 transition-all duration-200 ml-2" style="width: calc(100% - 8px);"
+                                                        data-scene="replicate-cylinder">
+                                                    <div class="font-medium text-xs">Cylinder</div>
+                                                </button>
+                                                <button class="vuer-scene-btn w-full text-center p-1 rounded-md bg-white text-gray-700 hover:bg-gray-50 border border-gray-300 transition-all duration-200 ml-2" style="width: calc(100% - 8px);"
+                                                        data-scene="replicate-helix">
+                                                    <div class="font-medium text-xs">Helix</div>
+                                                </button>
+                                                <button class="vuer-scene-btn w-full text-center p-1 rounded-md bg-white text-gray-700 hover:bg-gray-50 border border-gray-300 transition-all duration-200 ml-2" style="width: calc(100% - 8px);"
+                                                        data-scene="replicate-leaves">
+                                                    <div class="font-medium text-xs">Leaves</div>
+                                                </button>
+                                                <button class="vuer-scene-btn w-full text-center p-1 rounded-md bg-white text-gray-700 hover:bg-gray-50 border border-gray-300 transition-all duration-200 ml-2" style="width: calc(100% - 8px);"
+                                                        data-scene="replicate-newton_cradle">
+                                                    <div class="font-medium text-xs">Newton Cradle</div>
+                                                </button>
+                                                <button class="vuer-scene-btn w-full text-center p-1 rounded-md bg-white text-gray-700 hover:bg-gray-50 border border-gray-300 transition-all duration-200 ml-2" style="width: calc(100% - 8px);"
+                                                        data-scene="replicate-particle">
+                                                    <div class="font-medium text-xs">Particle</div>
+                                                </button>
+                                                <button class="vuer-scene-btn w-full text-center p-1 rounded-md bg-white text-gray-700 hover:bg-gray-50 border border-gray-300 transition-all duration-200 ml-2" style="width: calc(100% - 8px);"
+                                                        data-scene="replicate-stonehenge">
+                                                    <div class="font-medium text-xs">Stonehenge</div>
+                                                </button>
+                                            </div>
+                                        </div>
+
+                                        <!-- SDF category dropdown -->
+                                        <div class="dropdown-container">
+                                            <button class="dropdown-btn w-full text-center p-1 rounded-md bg-purple-100 text-gray-700 hover:bg-purple-200 border border-purple-300 transition-all duration-200" onclick="toggleDropdown('sdf')">
+                                                <div class="font-medium text-xs flex items-center justify-between px-1">
+                                                    <span>SDF Scenes</span>
+                                                    <span class="dropdown-arrow" id="sdf-arrow">▼</span>
+                                                </div>
+                                            </button>
+                                            <div class="dropdown-content" id="sdf-content" style="display: none; margin-top: 2px;">
+                                                <button class="vuer-scene-btn w-full text-center p-1 rounded-md bg-white text-gray-700 hover:bg-gray-50 border border-gray-300 transition-all duration-200 ml-2" style="width: calc(100% - 8px);"
+                                                        data-scene="sdf-bowl">
+                                                    <div class="font-medium text-xs">Bowl</div>
+                                                </button>
+                                                <button class="vuer-scene-btn w-full text-center p-1 rounded-md bg-white text-gray-700 hover:bg-gray-50 border border-gray-300 transition-all duration-200 ml-2" style="width: calc(100% - 8px);"
+                                                        data-scene="sdf-cow">
+                                                    <div class="font-medium text-xs">Cow</div>
+                                                </button>
+                                                <button class="vuer-scene-btn w-full text-center p-1 rounded-md bg-white text-gray-700 hover:bg-gray-50 border border-gray-300 transition-all duration-200 ml-2" style="width: calc(100% - 8px);"
+                                                        data-scene="sdf-gear">
+                                                    <div class="font-medium text-xs">Gear</div>
+                                                </button>
+                                                <button class="vuer-scene-btn w-full text-center p-1 rounded-md bg-white text-gray-700 hover:bg-gray-50 border border-gray-300 transition-all duration-200 ml-2" style="width: calc(100% - 8px);"
+                                                        data-scene="sdf-mug">
+                                                    <div class="font-medium text-xs">Mug</div>
+                                                </button>
+                                                <button class="vuer-scene-btn w-full text-center p-1 rounded-md bg-white text-gray-700 hover:bg-gray-50 border border-gray-300 transition-all duration-200 ml-2" style="width: calc(100% - 8px);"
+                                                        data-scene="sdf-nutbolt">
+                                                    <div class="font-medium text-xs">Nut Bolt</div>
+                                                </button>
+                                                <button class="vuer-scene-btn w-full text-center p-1 rounded-md bg-white text-gray-700 hover:bg-gray-50 border border-gray-300 transition-all duration-200 ml-2" style="width: calc(100% - 8px);"
+                                                        data-scene="sdf-torus">
+                                                    <div class="font-medium text-xs">Torus</div>
+                                                </button>
+                                            </div>
+                                        </div>
                                         <div class="border-t border-gray-300 my-2"></div>
                                         <button class="vuer-scene-btn w-full text-center p-1 rounded-md bg-white text-gray-700 hover:bg-gray-50 border border-gray-300 transition-all duration-200"
                                                 data-scene="gripper" data-type="video">
@@ -6740,7 +6875,18 @@ Robotic Manipulation</span></h1>
                 <script>
                     document.addEventListener('DOMContentLoaded', function () {
                         // Scene selection elements
-                        const sceneButtons = document.querySelectorAll('.vuer-scene-btn');
+                        let sceneButtons = document.querySelectorAll('.vuer-scene-btn');
+
+                        // Function to refresh scene button references (for dropdown content)
+                        function refreshSceneButtons() {
+                            sceneButtons = document.querySelectorAll('.vuer-scene-btn');
+                            sceneButtons.forEach(button => {
+                                // Remove any existing event listeners and add new ones
+                                const newButton = button.cloneNode(true);
+                                button.parentNode.replaceChild(newButton, button);
+                                newButton.addEventListener('click', () => showScene(newButton));
+                            });
+                        }
                         const vuerFrame = document.getElementById('vuerFrame');
                         const loadingIndicator = document.getElementById('loadingIndicator');
 
@@ -7002,24 +7148,46 @@ Robotic Manipulation</span></h1>
                             modal.appendChild(modalContent);
                             document.body.appendChild(modal);
 
-                            // Add download functionality with unique filename to prevent duplicates
+                            // Add download functionality for actual asset files
                             files.forEach((file, index) => {
                                 const btn = modal.querySelector(`[data-file-index="${index}"]`);
-                                btn.addEventListener('click', () => {
-                                    // Create download URL directly from the File object
-                                    const url = URL.createObjectURL(file);
-                                    const a = document.createElement('a');
-                                    a.href = url;
-
-                                    // Add timestamp to prevent browser duplicate naming
-                                    const timestamp = new Date().toISOString().replace(/[:.]/g, '-').slice(0, -5);
-                                    const baseName = file.name.replace('.mjcf.xml', '');
-                                    a.download = `${baseName}_${timestamp}.mjcf.xml`;
-
-                                    document.body.appendChild(a);
-                                    a.click();
-                                    document.body.removeChild(a);
-                                    URL.revokeObjectURL(url);
+                                btn.addEventListener('click', async () => {
+                                    if (file.downloadUrl) {
+                                        try {
+                                            // Fetch the file content and create a downloadable blob
+                                            const response = await fetch(file.downloadUrl);
+                                            if (response.ok) {
+                                                const content = await response.text();
+                                                const blob = new Blob([content], { type: file.type || 'application/xml' });
+                                                const url = URL.createObjectURL(blob);
+                                                const a = document.createElement('a');
+                                                a.href = url;
+                                                a.download = file.name;
+                                                document.body.appendChild(a);
+                                                a.click();
+                                                document.body.removeChild(a);
+                                                URL.revokeObjectURL(url);
+                                            } else {
+                                                console.error('Failed to fetch file:', file.downloadUrl, response.status);
+                                                alert('Failed to download file: ' + file.name);
+                                            }
+                                        } catch (error) {
+                                            console.error('Error downloading file:', error);
+                                            alert('Error downloading file: ' + file.name);
+                                        }
+                                    } else if (file instanceof File) {
+                                        // Real File object - use it directly
+                                        const url = URL.createObjectURL(file);
+                                        const a = document.createElement('a');
+                                        a.href = url;
+                                        a.download = file.name;
+                                        document.body.appendChild(a);
+                                        a.click();
+                                        document.body.removeChild(a);
+                                        URL.revokeObjectURL(url);
+                                    } else {
+                                        console.error('No download URL available for file:', file);
+                                    }
                                 });
                             });
 
@@ -7064,7 +7232,7 @@ Robotic Manipulation</span></h1>
                                 </div>
                                 <div style="margin-bottom: 16px;">
                                     ${files.map(file => `
-                                        <button onclick="downloadFile('${file.name}', '${URL.createObjectURL(file)}')"
+                                        <button onclick="downloadFileFromUrl('${file.name}', '${file.downloadUrl || (file instanceof File ? URL.createObjectURL(file) : '')}')"
                                                 style="display: block; width: 100%; margin: 6px 0; padding: 8px; background: #f3f4f6; border: 1px solid #d1d5db; border-radius: 6px; cursor: pointer; font-size: 13px;">
                                             📄 Download ${file.name}
                                         </button>
@@ -7076,19 +7244,35 @@ Robotic Manipulation</span></h1>
                                 </button>
                             `;
 
-                            // Add download function to global scope temporarily with unique naming
-                            window.downloadFile = function (filename, url) {
-                                const a = document.createElement('a');
-                                a.href = url;
+                            // Add download function to global scope temporarily
+                            window.downloadFileFromUrl = async function (filename, url) {
+                                if (!url) {
+                                    console.error('No URL provided for download:', filename);
+                                    return;
+                                }
 
-                                // Add timestamp to prevent browser duplicate naming
-                                const timestamp = new Date().toISOString().replace(/[:.]/g, '-').slice(0, -5);
-                                const baseName = filename.replace('.mjcf.xml', '');
-                                a.download = `${baseName}_${timestamp}.mjcf.xml`;
-
-                                document.body.appendChild(a);
-                                a.click();
-                                document.body.removeChild(a);
+                                try {
+                                    // Fetch the file content and create a downloadable blob
+                                    const response = await fetch(url);
+                                    if (response.ok) {
+                                        const content = await response.text();
+                                        const blob = new Blob([content], { type: 'application/xml' });
+                                        const downloadUrl = URL.createObjectURL(blob);
+                                        const a = document.createElement('a');
+                                        a.href = downloadUrl;
+                                        a.download = filename;
+                                        document.body.appendChild(a);
+                                        a.click();
+                                        document.body.removeChild(a);
+                                        URL.revokeObjectURL(downloadUrl);
+                                    } else {
+                                        console.error('Failed to fetch file:', url, response.status);
+                                        alert('Failed to download file: ' + filename);
+                                    }
+                                } catch (error) {
+                                    console.error('Error downloading file:', error);
+                                    alert('Error downloading file: ' + filename);
+                                }
                             };
 
                             document.body.appendChild(instructionPanel);
@@ -7097,7 +7281,7 @@ Robotic Manipulation</span></h1>
                             setTimeout(() => {
                                 if (instructionPanel.parentElement) {
                                     instructionPanel.remove();
-                                    delete window.downloadFile;
+                                    delete window.downloadFileFromUrl;
                                 }
                             }, 30000);
 
@@ -7109,98 +7293,148 @@ Robotic Manipulation</span></h1>
                         }
 
                         async function fetchSceneAssets(sceneName) {
-                            const assetBasePath = `/assets/scenes/${sceneName}/`;
                             const assets = [];
 
-                            // Define the asset files for each scene
+                            // Map scene names to actual asset file paths in the repository
                             const sceneAssetFiles = {
-                                'manipulation': [
-                                    {name: 'scene.xml', type: 'application/xml'},
-                                    {name: 'robot.xml', type: 'application/xml'},
-                                    {name: 'objects.xml', type: 'application/xml'}
-                                ],
-                                'dexterous': [
-                                    {name: 'hand_scene.xml', type: 'application/xml'},
-                                    {name: 'dexterous_hand.xml', type: 'application/xml'}
-                                ],
-                                'bimanual': [
-                                    {name: 'bimanual_scene.xml', type: 'application/xml'},
-                                    {name: 'dual_arms.xml', type: 'application/xml'}
-                                ],
-                                'soft-body': [
-                                    {name: 'soft_scene.xml', type: 'application/xml'},
-                                    {name: 'cloth.xml', type: 'application/xml'}
-                                ],
-                                'particles': [
-                                    {name: 'particle_scene.xml', type: 'application/xml'},
-                                    {name: 'granular.xml', type: 'application/xml'}
-                                ],
+                                // Direct scenes
                                 'adhesion': [
-                                    {name: 'active_adhesion.mjcf.xml', type: 'application/xml'},
+                                    {name: 'active_adhesion.mjcf.xml', path: '/assets/scenes/adhesion/active_adhesion.mjcf.xml', type: 'application/xml'}
+                                ],
+                                'balloons': [
+                                    {name: 'balloons.mjcf.xml', path: '/assets/scenes/balloons/balloons.mjcf.xml', type: 'application/xml'}
+                                ],
+                                'belt': [
+                                    {name: 'belt.mjcf.xml', path: '/assets/scenes/belt/belt.mjcf.xml', type: 'application/xml'},
+                                    {name: 'scene.xml', path: '/assets/scenes/belt/scene.xml', type: 'application/xml'}
+                                ],
+                                'bunny': [
+                                    {name: 'bunny.mjcf.xml', path: '/assets/scenes/bunny/bunny.mjcf.xml', type: 'application/xml'}
+                                ],
+                                'cable': [
+                                    {name: 'cable.mjcf.xml', path: '/assets/scenes/cable/cable.mjcf.xml', type: 'application/xml'},
+                                    {name: 'scene.xml', path: '/assets/scenes/cable/scene.xml', type: 'application/xml'}
+                                ],
+                                'cards': [
+                                    {name: 'cards.mjcf.xml', path: '/assets/scenes/cards/cards.mjcf.xml', type: 'application/xml'}
+                                ],
+                                'coil': [
+                                    {name: 'coil.mjcf.xml', path: '/assets/scenes/coil/coil.mjcf.xml', type: 'application/xml'},
+                                    {name: 'scene.xml', path: '/assets/scenes/coil/scene.xml', type: 'application/xml'}
+                                ],
+                                'humanoids': [
+                                    {name: '22_humanoids.mjcf.xml', path: '/assets/scenes/humanoids/22_humanoids.mjcf.xml', type: 'application/xml'},
+                                    {name: 'humanoid.xml', path: '/assets/scenes/humanoids/humanoid.xml', type: 'application/xml'}
+                                ],
+                                'mannequin': [
+                                    {name: 'mannequin.mjcf.xml', path: '/assets/scenes/mannequin/mannequin.mjcf.xml', type: 'application/xml'}
+                                ],
+                                'slider_crank': [
+                                    {name: 'slider_crank.mjcf.xml', path: '/assets/scenes/slider_crank/slider_crank.mjcf.xml', type: 'application/xml'}
+                                ],
+                                'tendon_arm': [
+                                    {name: 'arm26.mjcf.xml', path: '/assets/scenes/tendon_arm/arm26.mjcf.xml', type: 'application/xml'}
+                                ],
+                                'trampoline': [
+                                    {name: 'trampoline.mjcf.xml', path: '/assets/scenes/trampoline/trampoline.mjcf.xml', type: 'application/xml'},
+                                    {name: 'scene.xml', path: '/assets/scenes/trampoline/scene.xml', type: 'application/xml'}
+                                ],
+
+                                // Flex scenes
+                                'flex-flag': [
+                                    {name: 'flag.mjcf.xml', path: '/assets/scenes/flex/flag/flag.mjcf.xml', type: 'application/xml'}
+                                ],
+                                'flex-floppy': [
+                                    {name: 'floppy.mjcf.xml', path: '/assets/scenes/flex/floppy/floppy.mjcf.xml', type: 'application/xml'},
+                                    {name: 'scene.xml', path: '/assets/scenes/flex/floppy/scene.xml', type: 'application/xml'}
+                                ],
+                                'flex-hammock': [
+                                    {name: 'hammock.mjcf.xml', path: '/assets/scenes/flex/hammock/hammock.mjcf.xml', type: 'application/xml'},
+                                    {name: 'humanoid.xml', path: '/assets/scenes/flex/hammock/humanoid.xml', type: 'application/xml'}
+                                ],
+                                'flex-jelly': [
+                                    {name: 'jelly.mjcf.xml', path: '/assets/scenes/flex/jelly/jelly.mjcf.xml', type: 'application/xml'},
+                                    {name: 'scene.xml', path: '/assets/scenes/flex/jelly/scene.xml', type: 'application/xml'}
+                                ],
+                                'flex-poncho': [
+                                    {name: 'poncho.mjcf.xml', path: '/assets/scenes/flex/poncho/poncho.mjcf.xml', type: 'application/xml'},
+                                    {name: 'mannequin.xml', path: '/assets/scenes/flex/poncho/mannequin.xml', type: 'application/xml'}
+                                ],
+                                'flex-pulley': [
+                                    {name: 'pulley.mjcf.xml', path: '/assets/scenes/flex/pulley/pulley.mjcf.xml', type: 'application/xml'},
+                                    {name: 'scene.xml', path: '/assets/scenes/flex/pulley/scene.xml', type: 'application/xml'}
+                                ],
+
+                                // Replicate scenes
+                                'replicate-bowl': [
+                                    {name: 'bowl.mjcf.xml', path: '/assets/scenes/replicate/bowl/bowl.mjcf.xml', type: 'application/xml'}
+                                ],
+                                'replicate-bunnies': [
+                                    {name: 'bunnies.mjcf.xml', path: '/assets/scenes/replicate/bunnies/bunnies.mjcf.xml', type: 'application/xml'},
+                                    {name: 'container.xml', path: '/assets/scenes/replicate/bunnies/container.xml', type: 'application/xml'}
+                                ],
+                                'replicate-cylinder': [
+                                    {name: 'cylinder.mjcf.xml', path: '/assets/scenes/replicate/cylinder/cylinder.mjcf.xml', type: 'application/xml'}
+                                ],
+                                'replicate-helix': [
+                                    {name: 'helix.mjcf.xml', path: '/assets/scenes/replicate/helix/helix.mjcf.xml', type: 'application/xml'}
+                                ],
+                                'replicate-leaves': [
+                                    {name: 'leaves.mjcf.xml', path: '/assets/scenes/replicate/leaves/leaves.mjcf.xml', type: 'application/xml'}
+                                ],
+                                'replicate-newton_cradle': [
+                                    {name: 'newton_cradle.mjcf.xml', path: '/assets/scenes/replicate/newton_cradle/newton_cradle.mjcf.xml', type: 'application/xml'}
+                                ],
+                                'replicate-particle': [
+                                    {name: 'particle.mjcf.xml', path: '/assets/scenes/replicate/particle/particle.mjcf.xml', type: 'application/xml'},
+                                    {name: 'scene.xml', path: '/assets/scenes/replicate/particle/scene.xml', type: 'application/xml'}
+                                ],
+                                'replicate-stonehenge': [
+                                    {name: 'stonehenge.mjcf.xml', path: '/assets/scenes/replicate/stonehenge/stonehenge.mjcf.xml', type: 'application/xml'}
+                                ],
+
+                                // SDF scenes
+                                'sdf-bowl': [
+                                    {name: 'bowl.mjcf.xml', path: '/assets/scenes/sdf/bowl/bowl.mjcf.xml', type: 'application/xml'},
+                                    {name: 'scene.xml', path: '/assets/scenes/sdf/bowl/scene.xml', type: 'application/xml'}
+                                ],
+                                'sdf-cow': [
+                                    {name: 'cow.mjcf.xml', path: '/assets/scenes/sdf/cow/cow.mjcf.xml', type: 'application/xml'},
+                                    {name: 'scene.xml', path: '/assets/scenes/sdf/cow/scene.xml', type: 'application/xml'}
+                                ],
+                                'sdf-gear': [
+                                    {name: 'gear.mjcf.xml', path: '/assets/scenes/sdf/gear/gear.mjcf.xml', type: 'application/xml'},
+                                    {name: 'scene.xml', path: '/assets/scenes/sdf/gear/scene.xml', type: 'application/xml'}
+                                ],
+                                'sdf-mug': [
+                                    {name: 'mug.mjcf.xml', path: '/assets/scenes/sdf/mug/mug.mjcf.xml', type: 'application/xml'},
+                                    {name: 'scene.xml', path: '/assets/scenes/sdf/mug/scene.xml', type: 'application/xml'}
+                                ],
+                                'sdf-nutbolt': [
+                                    {name: 'nutbolt.mjcf.xml', path: '/assets/scenes/sdf/nutbolt/nutbolt.mjcf.xml', type: 'application/xml'},
+                                    {name: 'scene.xml', path: '/assets/scenes/sdf/nutbolt/scene.xml', type: 'application/xml'}
+                                ],
+                                'sdf-torus': [
+                                    {name: 'torus.mjcf.xml', path: '/assets/scenes/sdf/torus/torus.mjcf.xml', type: 'application/xml'},
+                                    {name: 'scene.xml', path: '/assets/scenes/sdf/torus/scene.xml', type: 'application/xml'}
                                 ]
                             };
 
                             const sceneFiles = sceneAssetFiles[sceneName] || [];
 
-                            // Generate embedded content to avoid CORS issues
+                            // Create file objects with download URLs pointing to actual files
                             for (const file of sceneFiles) {
-                                const mockContent = generateMockSceneContent(sceneName, file.name);
                                 assets.push({
                                     name: file.name,
-                                    content: mockContent,
+                                    downloadUrl: file.path,
                                     type: file.type
                                 });
-                                console.log(`Generated embedded asset: ${file.name}`);
+                                console.log(`Added asset file: ${file.name} -> ${file.path}`);
                             }
 
                             return assets;
                         }
 
-                        function generateMockSceneContent(sceneName, fileName) {
-                            // Generate appropriate XML content based on scene and file type
-                            const sceneConfigs = {
-                                'adhesion': {
-                                    'active_adhesion.mjcf.xml': `<?xml version="1.0" encoding="utf-8"?>
-<mujoco>
-  <worldbody>
-    <body name="adhesive_object" pos="0 0 1">
-      <geom name="sticky_surface" type="box" size="0.1 0.1 0.01" rgba="0.8 0.2 0.2 1" />
-      <joint name="free_joint" type="free" />
-    </body>
-  </worldbody>
-  <actuator>
-    <adhesion name="sticky_force" body="adhesive_object" />
-  </actuator>
-</mujoco>`
-                                },
-                                'manipulation': {
-                                    'scene.xml': `<?xml version="1.0" encoding="utf-8"?>
-<mujoco>
-  <worldbody>
-    <body name="robot_arm" pos="0 0 0">
-      <geom name="base" type="cylinder" size="0.1 0.05" rgba="0.2 0.2 0.8 1" />
-    </body>
-  </worldbody>
-</mujoco>`
-                                }
-                            };
-
-                            // Get scene-specific content or generate generic content
-                            const sceneContent = sceneConfigs[sceneName];
-                            if (sceneContent && sceneContent[fileName]) {
-                                return sceneContent[fileName];
-                            }
-
-                            // Generic XML content fallback
-                            return `<?xml version="1.0" encoding="utf-8"?>
-<mujoco>
-  <worldbody>
-    <body name="${sceneName}_object" pos="0 0 1">
-      <geom name="main_geom" type="box" size="0.1 0.1 0.1" rgba="0.5 0.5 0.5 1" />
-    </body>
-  </worldbody>
-</mujoco>`;
-                        }
 
 
                         function showEmptyVuer() {
@@ -7312,6 +7546,23 @@ Robotic Manipulation</span></h1>
                             button.addEventListener('click', () => showScene(button));
                         });
 
+                        // Dropdown toggle functionality
+                        window.toggleDropdown = function(category) {
+                            const content = document.getElementById(category + '-content');
+                            const arrow = document.getElementById(category + '-arrow');
+
+                            if (content.style.display === 'none') {
+                                content.style.display = 'block';
+                                arrow.innerHTML = '▲'; // Up arrow
+                            } else {
+                                content.style.display = 'none';
+                                arrow.innerHTML = '▼'; // Down arrow
+                            }
+
+                            // Refresh all scene button event listeners
+                            refreshSceneButtons();
+                        };
+
                         // Drag and drop listeners
                         dropZone.addEventListener('click', () => fileInput.click());
 
@@ -7377,11 +7628,8 @@ Robotic Manipulation</span></h1>
                                         Stowing</h3>
                                     <p class="text-gray-600 mt-1" style="font-size: 10px">Articulated object</p>
                                 </div>
-                                <div class="aspect-video bg-gradient-to-br from-red-100 to-orange-200 flex items-center justify-center">
-                                    <div class="text-center">
-                                        <div class="text-3xl mb-2">🗄️</div>
-                                        <div class="text-xs text-red-700 font-medium">Representative Image</div>
-                                    </div>
+                                <div class="aspect-video bg-gray-100 overflow-hidden rounded-b-lg">
+                                    <img src="/assets/images/tasks/drawer-stowing-square.png" alt="Drawer Stowing Task" class="w-full h-full object-cover">
                                 </div>
                             </div>
 
@@ -7393,11 +7641,8 @@ Robotic Manipulation</span></h1>
                                         Muffin</h3>
                                     <p class="text-gray-600 mt-1" style="font-size: 10px">Articulated object</p>
                                 </div>
-                                <div class="aspect-video bg-gradient-to-br from-orange-100 to-red-200 flex items-center justify-center">
-                                    <div class="text-center">
-                                        <div class="text-3xl mb-2">🧁</div>
-                                        <div class="text-xs text-red-700 font-medium">Representative Image</div>
-                                    </div>
+                                <div class="aspect-video bg-gray-100 overflow-hidden rounded-b-lg">
+                                    <img src="/assets/images/tasks/microwave-muffin-square.png" alt="Microwave Muffin Task" class="w-full h-full object-cover">
                                 </div>
                             </div>
 
@@ -7408,11 +7653,8 @@ Robotic Manipulation</span></h1>
                                     <h3 class="font-medium text-gray-800 leading-tight truncate" style="font-size: 16px !important;">Mug Tree</h3>
                                     <p class="text-gray-600 mt-1" style="font-size: 10px">Precise insertion & SDF</p>
                                 </div>
-                                <div class="aspect-video bg-gradient-to-br from-yellow-100 to-orange-200 flex items-center justify-center">
-                                    <div class="text-center">
-                                        <div class="text-3xl mb-2">☕</div>
-                                        <div class="text-xs text-orange-700 font-medium">Representative Image</div>
-                                    </div>
+                                <div class="aspect-video bg-gray-100 overflow-hidden rounded-b-lg">
+                                    <img src="/assets/images/tasks/mug-tree-square.png" alt="Mug Tree Task" class="w-full h-full object-cover">
                                 </div>
                             </div>
 
@@ -7423,11 +7665,8 @@ Robotic Manipulation</span></h1>
                                     <h3 class="font-medium text-gray-800 leading-tight truncate" style="font-size: 16px !important;">Ball Toy</h3>
                                     <p class="text-gray-600 mt-1" style="font-size: 10px">Long horizon</p>
                                 </div>
-                                <div class="aspect-video bg-gradient-to-br from-red-100 to-pink-200 flex items-center justify-center">
-                                    <div class="text-center">
-                                        <div class="text-3xl mb-2">⚽</div>
-                                        <div class="text-xs text-red-700 font-medium">Representative Image</div>
-                                    </div>
+                                <div class="aspect-video bg-gray-100 overflow-hidden rounded-b-lg">
+                                    <img src="/assets/images/tasks/ball-toy-square.png" alt="Ball Toy Task" class="w-full h-full object-cover">
                                 </div>
                             </div>
 
@@ -7438,11 +7677,8 @@ Robotic Manipulation</span></h1>
                                     <h3 class="font-medium text-gray-800 leading-tight truncate" style="font-size: 16px !important;">Pour Liquid</h3>
                                     <p class="text-gray-600 mt-1" style="font-size: 10px">Particles & Dexterous Hands</p>
                                 </div>
-                                <div class="aspect-video bg-gradient-to-br from-orange-100 to-yellow-200 flex items-center justify-center">
-                                    <div class="text-center">
-                                        <div class="text-3xl mb-2">🫗</div>
-                                        <div class="text-xs text-orange-700 font-medium">Representative Image</div>
-                                    </div>
+                                <div class="aspect-video bg-gray-100 overflow-hidden rounded-b-lg">
+                                    <img src="/assets/images/tasks/pour-liquid-square.png" alt="Pour Liquid Task" class="w-full h-full object-cover">
                                 </div>
                             </div>
 
@@ -7453,11 +7689,8 @@ Robotic Manipulation</span></h1>
                                     <h3 class="font-medium text-gray-800 leading-tight truncate" style="font-size: 16px !important;">Tie Knot</h3>
                                     <p class="text-gray-600 mt-1" style="font-size: 10px">Deformable objects</p>
                                 </div>
-                                <div class="aspect-video bg-gradient-to-br from-red-100 to-red-200 flex items-center justify-center">
-                                    <div class="text-center">
-                                        <div class="text-3xl mb-2">🪢</div>
-                                        <div class="text-xs text-red-700 font-medium">Representative Image</div>
-                                    </div>
+                                <div class="aspect-video bg-gray-100 overflow-hidden rounded-b-lg">
+                                    <img src="/assets/images/tasks/tie-knot-square.png" alt="Tie Knot Task" class="w-full h-full object-cover">
                                 </div>
                             </div>
                         </div>
