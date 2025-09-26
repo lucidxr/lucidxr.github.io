@@ -2067,6 +2067,10 @@
         appearance: none
     }
 
+    .grid-cols-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr))
+    }
+
     .grid-cols-4 {
         grid-template-columns:repeat(4, minmax(0, 1fr))
     }
@@ -2121,6 +2125,14 @@
 
     .gap-4 {
         gap: 1rem
+    }
+
+    .gap-6 {
+        gap: 1.5rem
+    }
+
+    .gap-12 {
+        gap: 3rem
     }
 
     .-space-x-4 > :not([hidden]) ~ :not([hidden]) {
@@ -3282,7 +3294,7 @@
 
     .text-blue-500 {
         --tw-text-opacity: 1;
-        color: rgb(63 131 248/var(--tw-text-opacity))
+        color: rgb(220 38 38/var(--tw-text-opacity))
     }
 
     .text-cyan-300 {
@@ -6474,9 +6486,10 @@ Robotic Manipulation</span></h1>
                     <span class="text-stone-600 text-center"><sup class="max-w-[750px] mx-auto mr-0.5">&dagger;</sup>Equal advising.</span>
                 </div>
                 <p class="max-w-[750px] mx-auto flex flex-wrap justify-center"><span
-                        class="text-center inline-block my-3.5 sm:my-2 mx-2"><a href="https://openreview.net/pdf?id=3p7rTnLJM8"
-                                                                                target="_blank"
-                                                                                class="text-xl no-underline font-normal text-[#009cff] bg-[#f9f9f9] hover:bg-[#f4f4f4] hover:transition-all px-4 py-3 rounded-xl"><span
+                        class="text-center inline-block my-3.5 sm:my-2 mx-2"><a
+                        href="https://openreview.net/pdf?id=3p7rTnLJM8"
+                        target="_blank"
+                        class="text-xl no-underline font-normal text-[#009cff] bg-[#f9f9f9] hover:bg-[#f4f4f4] hover:transition-all px-4 py-3 rounded-xl"><span
                         class="align-middle inline-flex justify-center mr-0.25"><svg stroke="currentColor"
                                                                                      fill="currentColor"
                                                                                      stroke-width="0"
@@ -6526,7 +6539,11 @@ Robotic Manipulation</span></h1>
                 <video autoplay="" muted="" playsinline="" loop="" alt="Teaser Video" class="rounded-xl">
                     <source src="/static/website_teaser_1-down-6b326cc772ec8c5c0f0ceef999ba3364.mp4" type="video/mp4"/>
                 </video>
-                <p class="max-w-[750px] mx-auto font-semibold text-center textstone-300 transition-all">We build an intuitive VR data collection interface entirely in simulation for imitation learning. We demonstrate an amplification and learning pipeline to produce learn visual policies from purely synthetic data that generalize to real-world scenes. Our system plugs into any SoA imitation learning method, amplifying data collection capacity 20x.</p></div>
+                <p class="max-w-[750px] mx-auto font-semibold text-center textstone-300 transition-all">We build an
+                    intuitive VR data collection interface entirely in simulation for imitation learning. We demonstrate
+                    an amplification and learning pipeline to produce learn visual policies from purely synthetic data
+                    that generalize to real-world scenes. Our system plugs into any SoA imitation learning method,
+                    amplifying data collection capacity 20x.</p></div>
             <div class="my-6 pt-6 pb-4"
                  style="background:linear-gradient(to right, rgba(224, 242, 254, 0.4), rgba(226, 232, 240, 0.4))">
                 <div class="mx-auto w-full max-w-[97.5%] lg:max-w-7xl py-2 md:py-4 px-2 md:px-4">
@@ -6548,11 +6565,18 @@ Robotic Manipulation</span></h1>
                         We introduce Lucid-XR, a generative data engine for creating diverse
                         and realistic multi-modal data to train real-world robotic systems. At the
                         core of Lucid-XR is vuer, a web-based physics simulation environment that runs
-                        directly on the XR headset, enabling internet-scale access to immersive, latency-free virtual interactions without requiring specialized equipment. The complete
-                        system integrates on-device physics simulation with human-to-robot pose retargeting. The data collected is further amplified by a physics-guided video generation
+                        directly on the XR headset, enabling internet-scale access to immersive, latency-free virtual
+                        interactions without requiring specialized equipment. The complete
+                        system integrates on-device physics simulation with human-to-robot pose retargeting. The data
+                        collected is further amplified by a physics-guided video generation
                         pipeline steerable via natural language specifications. We demonstrate zero-shot
-                        transfer of robot visual policies to unseen, cluttered, and poorly lit evaluation environments, after training entirely on Lucid-XR's synthetic data. We include examples across dexterous manipulation tasks that involve soft materials, loosely bound
-                        particles, and rigid body contact. Project website: <a href="https://lucidxr.github.io" target="_blank" class="font-normal no-underline text-stone-600 hover:underline underline-offset-3 hover:transition-all">https://lucidxr.github.io</a></p></div>
+                        transfer of robot visual policies to unseen, cluttered, and poorly lit evaluation environments,
+                        after training entirely on Lucid-XR's synthetic data. We include examples across dexterous
+                        manipulation tasks that involve soft materials, loosely bound
+                        particles, and rigid body contact. Project website: <a href="https://lucidxr.github.io"
+                                                                               target="_blank"
+                                                                               class="font-normal no-underline text-stone-600 hover:underline underline-offset-3 hover:transition-all">https://lucidxr.github.io</a>
+                    </p></div>
                 </div>
                 <h2 class="font-semibold border-b-[1px]" id="video">Technical Summary Video</h2>
                 <div class="aspect-w-16 aspect-h-9">
@@ -6562,20 +6586,949 @@ Robotic Manipulation</span></h1>
                             allowfullscreen="" class="rounded-lg"></iframe>
                 </div>
                 <h2 class="font-semibold border-b-[1px]" id="data-collection">On-Device Data Collection</h2>
-                <p class="mb-1"><strong>Existing systems run physics simulators off the VR device for two reasons:</strong></p>
-                <ol class="list-decimal ml-6 mb-1 space-y-0">
-                    <li class="mb-0">Getting it to run on-device is system-wise very difficult</li>
-                    <li class="mb-0">Virtual demonstrations are not useful towards training real robots</li>
-                </ol>
-                <p class="mb-1">Our new work Lucid-XR builds upon three web-standards: WebXR, WebGL, WebAssembly to move the MuJoCo simulator on device.</p>
-                <ul class="ml-2 mb-2 space-y-0">
-                    <li class="mb-0">👉 Not tethered to a workstation</li>
-                    <li class="mb-0">👉 Can scale over the internet</li>
-                    <li class="mb-0">👉 There is zero latency</li>
-                </ul>
+
+                <!-- A vs B Comparison Section -->
+                <div class="grid grid-cols-2 gap-6 lg:gap-12 mb-4">
+                    <!-- Column A: Existing Systems -->
+                    <div class="flex flex-col">
+                        <div class="text-center mb-2">
+                            <h3 class="text-xl font-bold text-red-700 mb-1">❌ Existing Systems</h3>
+                            <p class="text-gray-700 text-base font-medium">Run physics simulators off the VR device</p>
+                        </div>
+                        <div class="bg-red-50 border-2 border-red-200 rounded-lg p-3 mb-2 flex-grow">
+                            <ol class="list-decimal ml-4 space-y-1">
+                                <li class="text-gray-700"><strong>Off-device simulation introduces wifi latency</strong></li>
+                                <li class="text-gray-700"><strong>Virtual demonstrations are not useful towards training
+                                    real robots</strong></li>
+                            </ol>
+                        </div>
+                        <!-- Image placeholder for existing systems -->
+                        <div class="bg-gray-200 border-2 border-dashed border-gray-400 rounded-lg h-32 flex items-center justify-center">
+                            <span class="text-gray-500 text-sm">Existing System Image</span>
+                        </div>
+                    </div>
+
+                    <!-- Column B: Our Solution -->
+                    <div class="flex flex-col">
+                        <div class="text-center mb-2">
+                            <h3 class="text-xl font-bold text-green-700 mb-1">✅ Lucid-XR</h3>
+                            <p class="text-gray-700 text-base font-medium">Built on WebXR, WebGL, WebAssembly</p>
+                        </div>
+                        <div class="bg-green-50 border-2 border-green-200 rounded-lg p-3 mb-2 flex-grow">
+                            <ul class="space-y-1">
+                                <li class="text-gray-700 flex items-center">
+                                    <span class="mr-2">✅</span><strong>Easily scalable data collection</strong>
+                                </li>
+                                <li class="text-gray-700 flex items-center">
+                                    <span class="mr-2">✅</span><strong>There is zero latency</strong>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- Image placeholder for our solution -->
+                        <div class="bg-gray-200 border-2 border-dashed border-gray-400 rounded-lg h-32 flex items-center justify-center">
+                            <span class="text-gray-500 text-sm">Lucid-XR Image</span>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="mt-6">
+                    <p class="mb-4">Explore different manipulation tasks in our interactive vuer simulator. Select a
+                        scene from the left menu to see it running live in your browser.</p>
+
+                    <div class="bg-white border-2 border-gray-200 rounded-lg overflow-hidden mb-6">
+                        <!-- Header -->
+                        <div class="px-4 py-3 bg-gray-50 border-b border-gray-200">
+                            <div class="flex justify-end">
+                                <div class="text-sm text-gray-600 flex items-center gap-2">
+                                    <div class="w-2 h-2 bg-green-500 rounded-full"></div>
+                                    <span>Live vuer.ai simulator</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flex" style="height: 600px;">
+                            <!-- Scene Selection Menu (Left Column) -->
+                            <div class="bg-gray-100 border-r border-gray-200" style="width: 15%; flex-shrink: 0;">
+                                <div class="p-1">
+                                    <div class="space-y-1" id="sceneList">
+                                        <button class="vuer-scene-btn w-full text-center p-1 rounded-md bg-white text-gray-700 hover:bg-gray-50 border border-gray-300 transition-all duration-200"
+                                                data-scene="manipulation"
+                                                data-url="https://staging.vuer.ai/?scene=manipulation_demo">
+                                            <div class="font-medium text-xs">Manipulation</div>
+                                        </button>
+                                        <button class="vuer-scene-btn w-full text-center p-1 rounded-md bg-white text-gray-700 hover:bg-gray-50 border border-gray-300 transition-all duration-200"
+                                                data-scene="dexterous"
+                                                data-url="https://staging.vuer.ai/?scene=dexterous_demo">
+                                            <div class="font-medium text-xs">Dexterous</div>
+                                        </button>
+                                        <button class="vuer-scene-btn w-full text-center p-1 rounded-md bg-white text-gray-700 hover:bg-gray-50 border border-gray-300 transition-all duration-200"
+                                                data-scene="bimanual"
+                                                data-url="https://staging.vuer.ai/?scene=bimanual_demo">
+                                            <div class="font-medium text-xs">Bimanual</div>
+                                        </button>
+                                        <button class="vuer-scene-btn w-full text-center p-1 rounded-md bg-white text-gray-700 hover:bg-gray-50 border border-gray-300 transition-all duration-200"
+                                                data-scene="soft-body"
+                                                data-url="https://staging.vuer.ai/?scene=soft_body_demo">
+                                            <div class="font-medium text-xs">Soft Body</div>
+                                        </button>
+                                        <button class="vuer-scene-btn w-full text-center p-1 rounded-md bg-white text-gray-700 hover:bg-gray-50 border border-gray-300 transition-all duration-200"
+                                                data-scene="particles"
+                                                data-url="https://staging.vuer.ai/?scene=particle_demo">
+                                            <div class="font-medium text-xs">Particles</div>
+                                        </button>
+                                        <button class="vuer-scene-btn w-full text-center p-1 rounded-md bg-red-600 text-white hover:bg-red-700 border border-red-600 transition-all duration-200"
+                                                data-scene="adhesion"
+                                                data-url="https://staging.vuer.ai/?scene=adhesion_demo">
+                                            <div class="font-medium text-xs">Adhesion</div>
+                                        </button>
+                                        <div class="border-t border-gray-300 my-2"></div>
+                                        <button class="vuer-scene-btn w-full text-center p-1 rounded-md bg-white text-gray-700 hover:bg-gray-50 border border-gray-300 transition-all duration-200"
+                                                data-scene="gripper" data-type="video">
+                                            <div class="font-medium text-xs">Gripper Mode</div>
+                                        </button>
+                                        <button class="vuer-scene-btn w-full text-center p-1 rounded-md bg-white text-gray-700 hover:bg-gray-50 border border-gray-300 transition-all duration-200"
+                                                data-scene="hand" data-type="video">
+                                            <div class="font-medium text-xs">Hand Mode</div>
+                                        </button>
+                                        <div class="border-t border-gray-300 my-1"></div>
+                                        <div id="dropZone"
+                                             class="w-full p-1 rounded-md border-2 border-dashed border-gray-400 bg-white hover:bg-gray-50 transition-all duration-200 cursor-pointer text-center">
+                                            <div class="font-medium text-xs text-gray-600">Drop Scene</div>
+                                        </div>
+                                        <input type="file" id="fileInput" accept=".xml" class="hidden"/>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Main Content Area (Right Column) -->
+                            <div class="flex-1 relative">
+                                <!-- Vuer Loading Indicator -->
+                                <div id="loadingIndicator"
+                                     class="hidden flex items-center justify-center h-full bg-gray-100 absolute inset-0 z-20">
+                                    <div class="text-center">
+                                        <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-red-500 mx-auto mb-4"></div>
+                                        <p class="text-gray-600">Loading vuer scene...</p>
+                                    </div>
+                                </div>
+
+                                <!-- Vuer Simulator -->
+                                <iframe id="vuerFrame"
+                                        src="https://vuer.ai/?scene=manipulation_demo"
+                                        class="w-full h-full border-none absolute inset-0"
+                                        frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; xr-spatial-tracking"
+                                        allowfullscreen>
+                                </iframe>
+
+                                <!-- Retargeting Videos (overlaid) -->
+                                <video id="gripperVideo" muted playsinline loop
+                                       class="w-full h-full object-cover absolute inset-0 z-10">
+                                    <source src="/static/gripper-retargeting-video.mp4" type="video/mp4"/>
+                                    Your browser does not support the video tag.
+                                </video>
+                                <video id="handVideo" muted playsinline loop
+                                       class="w-full h-full object-cover absolute inset-0 z-10 hidden">
+                                    <source src="/static/hand-retargeting-video.mp4" type="video/mp4"/>
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <script>
+                    document.addEventListener('DOMContentLoaded', function () {
+                        // Scene selection elements
+                        const sceneButtons = document.querySelectorAll('.vuer-scene-btn');
+                        const vuerFrame = document.getElementById('vuerFrame');
+                        const loadingIndicator = document.getElementById('loadingIndicator');
+
+                        // Video elements
+                        const gripperVideo = document.getElementById('gripperVideo');
+                        const handVideo = document.getElementById('handVideo');
+
+                        // Drag and drop elements
+                        const dropZone = document.getElementById('dropZone');
+                        const fileInput = document.getElementById('fileInput');
+
+                        function showScene(button) {
+                            // Update button states
+                            sceneButtons.forEach(btn => {
+                                btn.className = 'vuer-scene-btn w-full text-center p-1 rounded-md bg-white text-gray-700 hover:bg-gray-50 border border-gray-300 transition-all duration-200';
+                            });
+                            button.className = 'vuer-scene-btn w-full text-center p-1 rounded-md bg-red-600 text-white hover:bg-red-700 border border-red-600 transition-all duration-200';
+
+                            const sceneType = button.getAttribute('data-type');
+                            const sceneName = button.getAttribute('data-scene');
+
+                            if (sceneType === 'video') {
+                                // Hide vuer frame and show video
+                                vuerFrame.style.display = 'none';
+
+                                if (sceneName === 'gripper') {
+                                    gripperVideo.classList.remove('hidden');
+                                    handVideo.classList.add('hidden');
+                                    gripperVideo.currentTime = 0;
+                                    gripperVideo.play();
+                                    handVideo.pause();
+                                } else if (sceneName === 'hand') {
+                                    handVideo.classList.remove('hidden');
+                                    gripperVideo.classList.add('hidden');
+                                    handVideo.currentTime = 0;
+                                    handVideo.play();
+                                    gripperVideo.pause();
+                                }
+                            } else {
+                                // Show vuer frame and hide videos
+                                vuerFrame.style.display = 'block';
+                                gripperVideo.classList.add('hidden');
+                                handVideo.classList.add('hidden');
+                                gripperVideo.pause();
+                                handVideo.pause();
+
+                                // Show loading indicator
+                                loadingIndicator.classList.remove('hidden');
+                                vuerFrame.style.opacity = '0.3';
+
+                                // Simulate hard reload and drag-drop behavior
+                                const sceneName = button.getAttribute('data-scene');
+                                simulateSceneDragDrop(sceneName);
+                            }
+                        }
+
+                        function simulateSceneDragDrop(sceneName) {
+                            console.log(`Loading scene: ${sceneName}`);
+
+                            // Only reload if vuer.ai isn't already loaded
+                            const currentUrl = vuerFrame.src;
+                            const baseVuerUrl = 'https://staging.vuer.ai/';
+
+                            if (!currentUrl || !currentUrl.includes('staging.vuer.ai')) {
+                                console.log('Loading fresh vuer.ai instance');
+                                vuerFrame.src = baseVuerUrl;
+
+                                // Wait for initial load, then prepare files
+                                vuerFrame.onload = function () {
+                                    setTimeout(() => {
+                                        simulateDragDropAssets(sceneName);
+                                    }, 2000);
+                                };
+                            } else {
+                                console.log('Vuer.ai already loaded, preparing files directly');
+                                // Don't reload, just prepare files
+                                setTimeout(() => {
+                                    simulateDragDropAssets(sceneName);
+                                }, 500);
+                            }
+                        }
+
+                        async function simulateDragDropAssets(sceneName) {
+                            console.log(`Preparing scene assets for: ${sceneName}`);
+
+                            try {
+                                const assetFiles = await fetchSceneAssets(sceneName);
+
+                                if (assetFiles.length > 0) {
+                                    const realFiles = assetFiles.map((asset) => {
+                                        const blob = new Blob([asset.content], {type: asset.type});
+                                        return new File([blob], asset.name, {type: asset.type});
+                                    });
+
+                                    // Automatically simulate drag-drop into vuer.ai iframe
+                                    setTimeout(() => {
+                                        simulateAutomaticDragDrop(realFiles);
+                                    }, 1000);
+                                } else {
+                                    console.log(`No asset files found for scene: ${sceneName}`);
+                                }
+
+                                // Hide loading indicator
+                                setTimeout(() => {
+                                    loadingIndicator.classList.add('hidden');
+                                    vuerFrame.style.opacity = '1';
+                                }, 1000);
+
+                            } catch (error) {
+                                console.error('Error loading scene assets:', error);
+                                loadingIndicator.classList.add('hidden');
+                                vuerFrame.style.opacity = '1';
+                            }
+                        }
+
+                        function simulateAutomaticDragDrop(files) {
+                            console.log(`Attempting to load ${files.length} files into vuer.ai`);
+
+                            try {
+                                const iframe = document.getElementById('vuerFrame');
+                                if (!iframe || !iframe.contentWindow) {
+                                    console.error('Could not access vuer.ai iframe');
+                                    return;
+                                }
+
+                                // Convert files to base64 for cross-origin transfer
+                                const filePromises = files.map(file => {
+                                    return new Promise((resolve) => {
+                                        const reader = new FileReader();
+                                        reader.onload = () => {
+                                            resolve({
+                                                name: file.name,
+                                                content: reader.result,
+                                                type: file.type,
+                                                size: file.size
+                                            });
+                                        };
+                                        reader.readAsText(file); // Read as text for XML files
+                                    });
+                                });
+
+                                Promise.all(filePromises).then(fileData => {
+                                    // Try PostMessage API first
+                                    console.log('Sending files via PostMessage to vuer.ai');
+                                    iframe.contentWindow.postMessage({
+                                        type: 'LOAD_FILES',
+                                        files: fileData,
+                                        source: 'lucid-xr'
+                                    }, 'https://staging.vuer.ai');
+
+                                    // Also try a different message format in case vuer.ai expects it
+                                    setTimeout(() => {
+                                        iframe.contentWindow.postMessage({
+                                            action: 'loadScene',
+                                            data: fileData
+                                        }, 'https://staging.vuer.ai');
+                                    }, 500);
+
+                                    // If PostMessage doesn't work, try different message formats
+                                    setTimeout(() => {
+                                        console.log('Trying alternative PostMessage formats');
+
+                                        // Try format that vuer.ai might expect for file drops
+                                        iframe.contentWindow.postMessage({
+                                            type: 'FILE_DROP',
+                                            files: fileData.map(f => ({
+                                                name: f.name,
+                                                content: f.content,
+                                                type: f.type
+                                            }))
+                                        }, 'https://staging.vuer.ai');
+
+                                        // Try mimicking drag-drop event structure
+                                        setTimeout(() => {
+                                            iframe.contentWindow.postMessage({
+                                                type: 'drop',
+                                                dataTransfer: {
+                                                    files: fileData
+                                                }
+                                            }, 'https://staging.vuer.ai');
+                                        }, 500);
+
+                                    }, 1500);
+
+                                    // Final fallback - show notification for manual drag-drop
+                                    setTimeout(() => {
+                                        console.log('Automated loading failed, showing manual instructions');
+                                        showManualDragDropInstructions(files);
+                                    }, 4000);
+
+                                    // Hide loading indicator
+                                    setTimeout(() => {
+                                        loadingIndicator.classList.add('hidden');
+                                        vuerFrame.style.opacity = '1';
+                                    }, 3000);
+                                });
+
+                            } catch (error) {
+                                console.error('Error in file loading:', error);
+                                // Show user-friendly message and fallback to manual approach
+                                showManualDragDropInstructions(files);
+                            }
+                        }
+
+                        function showManualDragDropInstructions(files) {
+                            console.log('Showing manual drag-drop instructions with file downloads');
+
+                            // Create download modal
+                            const modal = document.createElement('div');
+                            modal.style.cssText = `
+                                position: fixed;
+                                top: 0;
+                                left: 0;
+                                width: 100%;
+                                height: 100%;
+                                background: rgba(0, 0, 0, 0.7);
+                                z-index: 1000;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                            `;
+
+                            const modalContent = document.createElement('div');
+                            modalContent.style.cssText = `
+                                background: white;
+                                border-radius: 12px;
+                                padding: 24px;
+                                max-width: 450px;
+                                box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+                                text-align: center;
+                            `;
+
+                            modalContent.innerHTML = `
+                                <div style="font-size: 20px; font-weight: bold; color: #1f2937; margin-bottom: 12px;">
+                                    📁 Scene Files Ready
+                                </div>
+                                <div style="font-size: 14px; color: #6b7280; margin-bottom: 20px;">
+                                    Download the files below, then drag them into the vuer.ai window
+                                </div>
+                                <div style="margin-bottom: 20px;">
+                                    ${files.map((file, index) => `
+                                        <button class="download-btn" data-file-index="${index}"
+                                                style="display: block; width: 100%; margin: 8px 0; padding: 12px;
+                                                       background: #f3f4f6; border: 1px solid #d1d5db; border-radius: 8px;
+                                                       cursor: pointer; font-size: 14px; transition: all 0.2s;
+                                                       hover:background-color: #e5e7eb;">
+                                            📄 Download ${file.name}
+                                        </button>
+                                    `).join('')}
+                                </div>
+                                <button onclick="this.closest('.manual-modal').remove()"
+                                        style="padding: 10px 20px; background: #3b82f6; color: white; border: none;
+                                               border-radius: 6px; cursor: pointer; font-size: 14px;">
+                                    Close
+                                </button>
+                            `;
+
+                            modal.className = 'manual-modal';
+                            modal.appendChild(modalContent);
+                            document.body.appendChild(modal);
+
+                            // Add download functionality
+                            files.forEach((file, index) => {
+                                const btn = modal.querySelector(`[data-file-index="${index}"]`);
+                                btn.addEventListener('click', () => {
+                                    const blob = new Blob([file.stream ? file.stream() : file], { type: file.type });
+                                    const url = URL.createObjectURL(blob);
+                                    const a = document.createElement('a');
+                                    a.href = url;
+                                    a.download = file.name;
+                                    document.body.appendChild(a);
+                                    a.click();
+                                    document.body.removeChild(a);
+                                    URL.revokeObjectURL(url);
+                                });
+                            });
+
+                            // Close modal when clicking outside
+                            modal.addEventListener('click', (e) => {
+                                if (e.target === modal) {
+                                    modal.remove();
+                                }
+                            });
+
+                            // Hide loading indicator
+                            loadingIndicator.classList.add('hidden');
+                            vuerFrame.style.opacity = '1';
+                        }
+
+                        function showManualDropInstructions(files, sceneName) {
+                            console.log(`Preparing manual file drop for ${sceneName}`);
+
+                            // Create a simple download interface
+                            const instructionPanel = document.createElement('div');
+                            instructionPanel.style.cssText = `
+                                position: fixed;
+                                top: 50%;
+                                left: 50%;
+                                transform: translate(-50%, -50%);
+                                background: white;
+                                border: 2px solid #3b82f6;
+                                border-radius: 12px;
+                                padding: 20px;
+                                z-index: 1000;
+                                box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+                                max-width: 400px;
+                                text-align: center;
+                            `;
+
+                            instructionPanel.innerHTML = `
+                                <div style="font-size: 18px; font-weight: bold; color: #1f2937; margin-bottom: 12px;">
+                                    ${sceneName.charAt(0).toUpperCase() + sceneName.slice(1)} Scene
+                                </div>
+                                <div style="font-size: 14px; color: #6b7280; margin-bottom: 16px;">
+                                    Download the files below, then drag them into the vuer.ai window
+                                </div>
+                                <div style="margin-bottom: 16px;">
+                                    ${files.map(file => `
+                                        <button onclick="downloadFile('${file.name}', '${URL.createObjectURL(file)}')"
+                                                style="display: block; width: 100%; margin: 6px 0; padding: 8px; background: #f3f4f6; border: 1px solid #d1d5db; border-radius: 6px; cursor: pointer; font-size: 13px;">
+                                            📄 Download ${file.name}
+                                        </button>
+                                    `).join('')}
+                                </div>
+                                <button onclick="this.parentElement.remove()"
+                                        style="padding: 8px 16px; background: #3b82f6; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 14px;">
+                                    Close
+                                </button>
+                            `;
+
+                            // Add download function to global scope temporarily
+                            window.downloadFile = function (filename, url) {
+                                const a = document.createElement('a');
+                                a.href = url;
+                                a.download = filename;
+                                document.body.appendChild(a);
+                                a.click();
+                                document.body.removeChild(a);
+                            };
+
+                            document.body.appendChild(instructionPanel);
+
+                            // Auto-remove after 30 seconds
+                            setTimeout(() => {
+                                if (instructionPanel.parentElement) {
+                                    instructionPanel.remove();
+                                    delete window.downloadFile;
+                                }
+                            }, 30000);
+
+                            // Finalize vuer loading
+                            setTimeout(() => {
+                                loadingIndicator.classList.add('hidden');
+                                vuerFrame.style.opacity = '1';
+                            }, 1000);
+                        }
+
+                        async function fetchSceneAssets(sceneName) {
+                            const assetBasePath = `/assets/scenes/${sceneName}/`;
+                            const assets = [];
+
+                            // Define the asset files for each scene
+                            const sceneAssetFiles = {
+                                'manipulation': [
+                                    {name: 'scene.xml', type: 'application/xml'},
+                                    {name: 'robot.xml', type: 'application/xml'},
+                                    {name: 'objects.xml', type: 'application/xml'}
+                                ],
+                                'dexterous': [
+                                    {name: 'hand_scene.xml', type: 'application/xml'},
+                                    {name: 'dexterous_hand.xml', type: 'application/xml'}
+                                ],
+                                'bimanual': [
+                                    {name: 'bimanual_scene.xml', type: 'application/xml'},
+                                    {name: 'dual_arms.xml', type: 'application/xml'}
+                                ],
+                                'soft-body': [
+                                    {name: 'soft_scene.xml', type: 'application/xml'},
+                                    {name: 'cloth.xml', type: 'application/xml'}
+                                ],
+                                'particles': [
+                                    {name: 'particle_scene.xml', type: 'application/xml'},
+                                    {name: 'granular.xml', type: 'application/xml'}
+                                ],
+                                'adhesion': [
+                                    {name: 'active_adhesion.mjcf.xml', type: 'application/xml'},
+                                ]
+                            };
+
+                            const sceneFiles = sceneAssetFiles[sceneName] || [];
+
+                            // Generate embedded content to avoid CORS issues
+                            for (const file of sceneFiles) {
+                                const mockContent = generateMockSceneContent(sceneName, file.name);
+                                assets.push({
+                                    name: file.name,
+                                    content: mockContent,
+                                    type: file.type
+                                });
+                                console.log(`Generated embedded asset: ${file.name}`);
+                            }
+
+                            return assets;
+                        }
+
+                        function generateMockSceneContent(sceneName, fileName) {
+                            // Generate appropriate XML content based on scene and file type
+                            const sceneConfigs = {
+                                'adhesion': {
+                                    'active_adhesion.mjcf.xml': `<?xml version="1.0" encoding="utf-8"?>
+<mujoco>
+  <worldbody>
+    <body name="adhesive_object" pos="0 0 1">
+      <geom name="sticky_surface" type="box" size="0.1 0.1 0.01" rgba="0.8 0.2 0.2 1" />
+      <joint name="free_joint" type="free" />
+    </body>
+  </worldbody>
+  <actuator>
+    <adhesion name="sticky_force" body="adhesive_object" />
+  </actuator>
+</mujoco>`
+                                },
+                                'manipulation': {
+                                    'scene.xml': `<?xml version="1.0" encoding="utf-8"?>
+<mujoco>
+  <worldbody>
+    <body name="robot_arm" pos="0 0 0">
+      <geom name="base" type="cylinder" size="0.1 0.05" rgba="0.2 0.2 0.8 1" />
+    </body>
+  </worldbody>
+</mujoco>`
+                                }
+                            };
+
+                            // Get scene-specific content or generate generic content
+                            const sceneContent = sceneConfigs[sceneName];
+                            if (sceneContent && sceneContent[fileName]) {
+                                return sceneContent[fileName];
+                            }
+
+                            // Generic XML content fallback
+                            return `<?xml version="1.0" encoding="utf-8"?>
+<mujoco>
+  <worldbody>
+    <body name="${sceneName}_object" pos="0 0 1">
+      <geom name="main_geom" type="box" size="0.1 0.1 0.1" rgba="0.5 0.5 0.5 1" />
+    </body>
+  </worldbody>
+</mujoco>`;
+                        }
+
+
+                        function showEmptyVuer() {
+                            // Load clean staging.vuer.ai instance
+                            const cleanUrl = `https://staging.vuer.ai/?t=${Date.now()}`;
+                            vuerFrame.src = cleanUrl;
+
+                            setTimeout(() => {
+                                loadingIndicator.classList.add('hidden');
+                                vuerFrame.style.opacity = '1';
+                            }, 2000);
+                        }
+
+                        function createMockFileList(sceneName) {
+                            // Create mock file objects representing the asset folder contents
+                            const mockFiles = [];
+
+                            // Define typical files for each scene type
+                            const sceneAssets = {
+                                'manipulation': ['scene.xml', 'robot.xml', 'objects.xml', 'textures/wood.png'],
+                                'dexterous': ['hand_scene.xml', 'dexterous_hand.xml', 'textures/skin.png'],
+                                'bimanual': ['bimanual_scene.xml', 'dual_arms.xml', 'workspace.xml'],
+                                'soft-body': ['soft_scene.xml', 'cloth.xml', 'physics.xml'],
+                                'particles': ['particle_scene.xml', 'granular.xml', 'materials.xml'],
+                                'adhesion': ['active_adhesion.mjcf.xml']
+                            };
+
+                            const files = sceneAssets[sceneName] || ['scene.xml'];
+
+                            files.forEach(fileName => {
+                                const mockFile = new File(['mock content'], fileName, {
+                                    type: fileName.endsWith('.xml') ? 'application/xml' : 'image/png'
+                                });
+                                mockFiles.push(mockFile);
+                            });
+
+                            return mockFiles;
+                        }
+
+                        function createMockDataTransfer(files) {
+                            // Create a mock DataTransfer object
+                            const dt = new DataTransfer();
+                            files.forEach(file => {
+                                dt.items.add(file);
+                            });
+                            return dt;
+                        }
+
+                        function fallbackSceneLoad(sceneName) {
+                            // Enhanced URL-based scene loading
+                            const sceneMapping = {
+                                'manipulation': 'manipulation_demo',
+                                'dexterous': 'dexterous_hand',
+                                'bimanual': 'bimanual_robots',
+                                'soft-body': 'soft_body_physics',
+                                'particles': 'granular_materials',
+                                'adhesion': 'adhesion_physics'
+                            };
+
+                            const mappedScene = sceneMapping[sceneName] || sceneName;
+
+                            // Try multiple URL approaches
+                            const urlOptions = [
+                                `https://staging.vuer.ai/?scene=${mappedScene}&autoload=true&reload=true&t=${Date.now()}`,
+                                `https://staging.vuer.ai/?load=${mappedScene}&cache_bust=${Date.now()}`,
+                                `https://staging.vuer.ai/#scene=${mappedScene}&auto=1`
+                            ];
+
+                            const selectedUrl = urlOptions[0]; // Use first option
+                            console.log(`Loading scene via URL: ${selectedUrl}`);
+                            vuerFrame.src = selectedUrl;
+
+                            setTimeout(() => {
+                                loadingIndicator.classList.add('hidden');
+                                vuerFrame.style.opacity = '1';
+                            }, 2500);
+                        }
+
+                        function loadCustomScene(file) {
+                            // Clear active scene buttons
+                            sceneButtons.forEach(btn => {
+                                btn.className = 'vuer-scene-btn w-full text-center p-1 rounded-md bg-white text-gray-700 hover:bg-gray-50 border border-gray-300 transition-all duration-200';
+                            });
+
+                            // Show loading
+                            loadingIndicator.classList.remove('hidden');
+
+                            // Create a URL with the uploaded file
+                            const formData = new FormData();
+                            formData.append('scene', file);
+
+                            // For demo purposes, we'll just load vuer.ai with a generic upload URL
+                            // In a real implementation, you'd need to upload the file to vuer.ai
+                            const uploadUrl = 'https://vuer.ai/?upload=true';
+                            vuerFrame.src = uploadUrl;
+
+                            // Update drop zone to show success
+                            dropZone.className = 'w-full p-1.5 rounded-lg border-2 border-dashed border-green-400 bg-green-50 transition-all duration-200 cursor-pointer text-center';
+                            dropZone.innerHTML = '<div class="font-medium text-xs text-green-600">Scene Loaded</div><div class="text-xs text-green-500">' + file.name + '</div>';
+
+                            // Hide loading after delay
+                            setTimeout(() => {
+                                loadingIndicator.classList.add('hidden');
+                            }, 2000);
+                        }
+
+                        // Add click listeners
+                        sceneButtons.forEach(button => {
+                            button.addEventListener('click', () => showScene(button));
+                        });
+
+                        // Drag and drop listeners
+                        dropZone.addEventListener('click', () => fileInput.click());
+
+                        fileInput.addEventListener('change', (e) => {
+                            const file = e.target.files[0];
+                            if (file && file.name.endsWith('.xml')) {
+                                loadCustomScene(file);
+                            }
+                        });
+
+                        dropZone.addEventListener('dragover', (e) => {
+                            e.preventDefault();
+                            dropZone.className = 'w-full p-1.5 rounded-lg border-2 border-dashed border-red-400 bg-red-50 transition-all duration-200 cursor-pointer text-center';
+                        });
+
+                        dropZone.addEventListener('dragleave', (e) => {
+                            e.preventDefault();
+                            dropZone.className = 'w-full p-1.5 rounded-lg border-2 border-dashed border-gray-400 bg-white hover:bg-gray-50 transition-all duration-200 cursor-pointer text-center';
+                        });
+
+                        dropZone.addEventListener('drop', (e) => {
+                            e.preventDefault();
+                            const files = e.dataTransfer.files;
+                            if (files.length > 0 && files[0].name.endsWith('.xml')) {
+                                loadCustomScene(files[0]);
+                            } else {
+                                dropZone.className = 'w-full p-1.5 rounded-lg border-2 border-dashed border-red-400 bg-red-50 transition-all duration-200 cursor-pointer text-center';
+                                dropZone.innerHTML = '<div class="font-medium text-xs text-red-600">Invalid File</div><div class="text-xs text-red-500">XML files only</div>';
+                                setTimeout(() => {
+                                    dropZone.className = 'w-full p-1.5 rounded-lg border-2 border-dashed border-gray-400 bg-white hover:bg-gray-50 transition-all duration-200 cursor-pointer text-center';
+                                    dropZone.innerHTML = '<div class="font-medium text-xs text-gray-600">Drop Scene</div><div class="text-xs text-gray-500">Drag .xml file</div>';
+                                }, 2000);
+                            }
+                        });
+
+                        // Initialize with adhesion scene as default
+                        const defaultButton = Array.from(sceneButtons).find(btn => btn.getAttribute('data-scene') === 'adhesion');
+                        if (defaultButton) {
+                            showScene(defaultButton);
+                        } else if (sceneButtons.length > 0) {
+                            showScene(sceneButtons[0]); // fallback to first scene
+                        }
+                    });
+                </script>
 
                 <h2 class="font-semibold border-b-[1px]" id="task-gallery">Task Gallery</h2>
-                <p>Content for Task Gallery section goes here...</p>
+
+                <!-- Scrollable Task Gallery -->
+                <div class="mb-6">
+                    <p class="mb-4 text-gray-700">
+                        Explore our diverse set of manipulation tasks. Click on any task below to see a demonstration
+                        video.
+                    </p>
+
+                    <!-- Task buttons spanning full width -->
+                    <div class="pb-4">
+                        <div class="flex w-full gap-2">
+                            <!-- Task: Drawer Stowing -->
+                            <div class="task-item flex-1 bg-white border-2 border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-all cursor-pointer"
+                                 onclick="showTaskVideo('drawer-stowing')">
+                                <div class="px-2 pt-2 pb-1 text-center">
+                                    <h3 class="font-medium text-gray-800 leading-tight truncate" style="font-size: 16px !important;">Drawer
+                                        Stowing</h3>
+                                    <p class="text-gray-600 mt-1" style="font-size: 10px">Articulated object</p>
+                                </div>
+                                <div class="aspect-video bg-gradient-to-br from-red-100 to-orange-200 flex items-center justify-center">
+                                    <div class="text-center">
+                                        <div class="text-3xl mb-2">🗄️</div>
+                                        <div class="text-xs text-red-700 font-medium">Representative Image</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Task: Microwave Muffin -->
+                            <div class="task-item flex-1 bg-white border-2 border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-all cursor-pointer"
+                                 onclick="showTaskVideo('microwave-muffin')">
+                                <div class="px-2 pt-2 pb-1 text-center">
+                                    <h3 class="font-medium text-gray-800 leading-tight truncate" style="font-size: 16px !important;">Microwave
+                                        Muffin</h3>
+                                    <p class="text-gray-600 mt-1" style="font-size: 10px">Articulated object</p>
+                                </div>
+                                <div class="aspect-video bg-gradient-to-br from-orange-100 to-red-200 flex items-center justify-center">
+                                    <div class="text-center">
+                                        <div class="text-3xl mb-2">🧁</div>
+                                        <div class="text-xs text-red-700 font-medium">Representative Image</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Task: Mug Tree -->
+                            <div class="task-item flex-1 bg-white border-2 border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-all cursor-pointer"
+                                 onclick="showTaskVideo('mug-tree')">
+                                <div class="px-2 pt-2 pb-1 text-center">
+                                    <h3 class="font-medium text-gray-800 leading-tight truncate" style="font-size: 16px !important;">Mug Tree</h3>
+                                    <p class="text-gray-600 mt-1" style="font-size: 10px">Precise insertion & SDF</p>
+                                </div>
+                                <div class="aspect-video bg-gradient-to-br from-yellow-100 to-orange-200 flex items-center justify-center">
+                                    <div class="text-center">
+                                        <div class="text-3xl mb-2">☕</div>
+                                        <div class="text-xs text-orange-700 font-medium">Representative Image</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Task: Ball Toy -->
+                            <div class="task-item flex-1 bg-white border-2 border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-all cursor-pointer"
+                                 onclick="showTaskVideo('ball-toy')">
+                                <div class="px-2 pt-2 pb-1 text-center">
+                                    <h3 class="font-medium text-gray-800 leading-tight truncate" style="font-size: 16px !important;">Ball Toy</h3>
+                                    <p class="text-gray-600 mt-1" style="font-size: 10px">Long horizon</p>
+                                </div>
+                                <div class="aspect-video bg-gradient-to-br from-red-100 to-pink-200 flex items-center justify-center">
+                                    <div class="text-center">
+                                        <div class="text-3xl mb-2">⚽</div>
+                                        <div class="text-xs text-red-700 font-medium">Representative Image</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Task: Pour Liquid -->
+                            <div class="task-item flex-1 bg-white border-2 border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-all cursor-pointer"
+                                 onclick="showTaskVideo('pour-liquid')">
+                                <div class="px-2 pt-2 pb-1 text-center">
+                                    <h3 class="font-medium text-gray-800 leading-tight truncate" style="font-size: 16px !important;">Pour Liquid</h3>
+                                    <p class="text-gray-600 mt-1" style="font-size: 10px">Particles & Dexterous Hands</p>
+                                </div>
+                                <div class="aspect-video bg-gradient-to-br from-orange-100 to-yellow-200 flex items-center justify-center">
+                                    <div class="text-center">
+                                        <div class="text-3xl mb-2">🫗</div>
+                                        <div class="text-xs text-orange-700 font-medium">Representative Image</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Task: Tie Knot -->
+                            <div class="task-item flex-1 bg-white border-2 border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-all cursor-pointer"
+                                 onclick="showTaskVideo('tie-knot')">
+                                <div class="px-2 pt-2 pb-1 text-center">
+                                    <h3 class="font-medium text-gray-800 leading-tight truncate" style="font-size: 16px !important;">Tie Knot</h3>
+                                    <p class="text-gray-600 mt-1" style="font-size: 10px">Deformable objects</p>
+                                </div>
+                                <div class="aspect-video bg-gradient-to-br from-red-100 to-red-200 flex items-center justify-center">
+                                    <div class="text-center">
+                                        <div class="text-3xl mb-2">🪢</div>
+                                        <div class="text-xs text-red-700 font-medium">Representative Image</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Video display area -->
+                    <div id="task-video-container" class="mt-6">
+                        <div class="bg-black rounded-lg overflow-hidden shadow-lg">
+                            <div class="aspect-video flex items-center justify-center">
+                                <video id="task-video" controls class="w-full h-full">
+                                    <source src="" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <script>
+                    // Initialize with first task on page load
+                    document.addEventListener('DOMContentLoaded', function () {
+                        showTaskVideo('drawer-stowing');
+                    });
+
+                    // Task video data
+                    const taskVideos = {
+                        'drawer-stowing': {
+                            title: 'Drawer Stowing Task',
+                            description: 'Robot demonstrates precise manipulation to open drawer and place objects inside.',
+                            videoUrl: '/videos/tasks/drawer_stowing.mp4'
+                        },
+                        'microwave-muffin': {
+                            title: 'Microwave Muffin Task',
+                            description: 'Complex multi-step task involving opening microwave, placing muffin, and operating controls.',
+                            videoUrl: '/videos/tasks/microwave_muffin.mp4'
+                        },
+                        'mug-tree': {
+                            title: 'Mug Tree Task',
+                            description: 'Careful stacking and balancing task requiring precise placement of mugs on tree structure.',
+                            videoUrl: '/videos/tasks/mug_tree.mp4'
+                        },
+                        'ball-toy': {
+                            title: 'Ball Toy Interaction',
+                            description: 'Dynamic interaction with ball toys, demonstrating reactive manipulation skills.',
+                            videoUrl: '/videos/tasks/ball_toy.mp4'
+                        },
+                        'pour-liquid': {
+                            title: 'Pour Liquid Task',
+                            description: 'Fluid dynamics simulation showing precise pouring control and liquid physics.',
+                            videoUrl: '/videos/tasks/pour_liquid.mp4'
+                        },
+                        'tie-knot': {
+                            title: 'Tie Knot Task',
+                            description: 'Advanced deformable object manipulation demonstrating rope and knot tying capabilities.',
+                            videoUrl: '/videos/tasks/tie_knot.mp4'
+                        }
+                    };
+
+                    function showTaskVideo(taskId) {
+                        const taskData = taskVideos[taskId];
+                        if (!taskData) return;
+
+                        // Update video content
+                        document.getElementById('task-video').src = taskData.videoUrl;
+
+                        // Show video container
+                        document.getElementById('task-video-container').classList.remove('hidden');
+
+                        // Scroll to video
+                        document.getElementById('task-video-container').scrollIntoView({behavior: 'smooth'});
+                    }
+
+                    function hideTaskVideo() {
+                        // Pause video
+                        document.getElementById('task-video').pause();
+
+                        // Hide container
+                        document.getElementById('task-video-container').classList.add('hidden');
+                    }
+                </script>
+
                 <h2 class="font-semibold border-b-[1px]" id="synthesis">Synthesizing Diverse Manipulation Data</h2>
                 <p>Content for Synthesizing Diverse Manipulation Data section goes here...</p>
 
