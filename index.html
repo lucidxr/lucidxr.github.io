@@ -7002,15 +7002,20 @@ Robotic Manipulation</span></h1>
                             modal.appendChild(modalContent);
                             document.body.appendChild(modal);
 
-                            // Add download functionality
+                            // Add download functionality with unique filename to prevent duplicates
                             files.forEach((file, index) => {
                                 const btn = modal.querySelector(`[data-file-index="${index}"]`);
                                 btn.addEventListener('click', () => {
-                                    const blob = new Blob([file.stream ? file.stream() : file], { type: file.type });
-                                    const url = URL.createObjectURL(blob);
+                                    // Create download URL directly from the File object
+                                    const url = URL.createObjectURL(file);
                                     const a = document.createElement('a');
                                     a.href = url;
-                                    a.download = file.name;
+
+                                    // Add timestamp to prevent browser duplicate naming
+                                    const timestamp = new Date().toISOString().replace(/[:.]/g, '-').slice(0, -5);
+                                    const baseName = file.name.replace('.mjcf.xml', '');
+                                    a.download = `${baseName}_${timestamp}.mjcf.xml`;
+
                                     document.body.appendChild(a);
                                     a.click();
                                     document.body.removeChild(a);
@@ -7071,11 +7076,16 @@ Robotic Manipulation</span></h1>
                                 </button>
                             `;
 
-                            // Add download function to global scope temporarily
+                            // Add download function to global scope temporarily with unique naming
                             window.downloadFile = function (filename, url) {
                                 const a = document.createElement('a');
                                 a.href = url;
-                                a.download = filename;
+
+                                // Add timestamp to prevent browser duplicate naming
+                                const timestamp = new Date().toISOString().replace(/[:.]/g, '-').slice(0, -5);
+                                const baseName = filename.replace('.mjcf.xml', '');
+                                a.download = `${baseName}_${timestamp}.mjcf.xml`;
+
                                 document.body.appendChild(a);
                                 a.click();
                                 document.body.removeChild(a);
